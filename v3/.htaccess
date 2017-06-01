@@ -1,0 +1,5 @@
+<IfModule mod_rewrite.c>
+	RewriteEngine On
+	RewriteRule (.*)/(.*)/(.*)$ index.php?action=$1&method=$2&args=$3 [L,QSA]
+	RewriteRule (.*)/(.*)$ index.php?action=$1&method=$2 [L,QSA]
+</IfModule>

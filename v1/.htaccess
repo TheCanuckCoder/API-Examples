@@ -1,0 +1,7 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+	# We don't know the id
+	RewriteRule (.*)/limit/(.*)/type/(.*)$ index.php?action=$1&limit=$2&method=$3 [L,QSA]
+	RewriteRule (.*)/(.*)$ index.php?action=$1&limit=$2 [L,QSA]
+	RewriteRule (.*)$ index.php?action=$1 [L,QSA]
+</IfModule>
